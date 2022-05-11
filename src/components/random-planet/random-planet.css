@@ -1,0 +1,28 @@
+.planet_wrapper {
+    width: 100%;
+    background-color: #404040;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.planet_img {
+    width: 150px;
+    height: 150px;
+    margin-right: 40px;
+}
+
+.planet_item {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #888888;
+}
+
+.planet_name{
+    font-size: 32px;
+}

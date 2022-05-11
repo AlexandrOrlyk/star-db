@@ -1,0 +1,21 @@
+.header{
+    display: grid;
+    grid-template-columns: auto min-content min-content min-content;
+    grid-gap: 20px
+}
+
+.nav{
+    color: #fff;
+    cursor: pointer;
+    transition: .3 ease;    
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav:hover{
+    color:blue
+}
+
+
