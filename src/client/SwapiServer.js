@@ -43,7 +43,7 @@ export class SwapiServer {
     return item.url.split('/')[5];
   }
 
-  _transformPlanet(planet) {
+  _transformPlanet = (planet) => {
     return {
       id: this._extractId(planet),
       name: planet.name,
@@ -53,17 +53,17 @@ export class SwapiServer {
     };
   }
 
-  _transformPerson(person) {
+  _transformPerson = (person) => {
     return {
       id: this._extractId(person),
       name: person.name,
-      population: person.population,
-      rotation: person.rotation_period,
-      diameter: person.diameter,
+      gender: person.gender,
+      birthYear: person.birth_year,
+      height: person.mass
     };
   }
 
-  _transformStarship(starship) {
+  _transformStarship = (starship) => {
     return {
       id: this._extractId(starship),
       name: starship.name,

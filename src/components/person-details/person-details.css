@@ -6,12 +6,10 @@
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    align-self: flex-start;
 }
 
-.info_container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.person_info_container {
     width: 100%;
 }
 
@@ -21,8 +19,8 @@
     border-bottom: none
 }
 
-.person_item:not(:last-child){
+.person_item:not(:last-child) {
     padding: 10px 20px;
     width: 100%;
-    border-bottom: 1px solid #888888;    
+    border-bottom: 1px solid #888888;
 }

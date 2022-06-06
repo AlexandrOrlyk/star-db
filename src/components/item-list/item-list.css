@@ -1,0 +1,32 @@
+.persons_wrapper {
+    width: 100%;
+    background-color: #404040;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 0px 0px;
+}
+
+.persons_item {
+    padding: 20px;
+}
+
+.persons_item:last-child {
+    border: none;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+.persons_item:first-child {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.persons_item:hover {
+    background-color: gray;
+    transition: .3s background-color;
+    cursor: pointer;
+}
+
+.active{
+    background-color: gray;
+}

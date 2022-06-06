@@ -6,25 +6,32 @@ import { PlanetItem } from "./planet-item";
 import "./random-planet.css";
 
 export const RandomPlanet = () => {
-  const [planetState, setPlanetState] = useState({});
+  const [planetState, setPlanetState] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const errorMessage = () => {
     setLoading(false);
     setError(true);
+    console.log('update');
   };
 
-  useEffect(() => {
-    const id = Math.floor(Math.random() * 20 + 10);
+  
+
+  const updatePlanet = () => {
+    const id = Math.floor(Math.random() * 25 + 3);
     const swapi = new SwapiServer();
     swapi
       .getPlanet(id)
       .then((res) => {
-        setPlanetState({ ...res });
+        setPlanetState(res);
         setLoading(false);
       })
       .catch(errorMessage);
+  };
+
+  useEffect(() => {
+    setInterval(() => updatePlanet(), 1500);    
   }, []);
 
   const hasData = !(error || loading);
